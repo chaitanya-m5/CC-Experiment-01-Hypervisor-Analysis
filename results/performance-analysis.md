@@ -1,35 +1,61 @@
-Hypervisor Performance Comparison
-1. Virtual Machine Configuration
-Parameter	Type-1: Proxmox VE	Type-2: VMware Workstation
-Hypervisor Type	Type-1	Type-2
-Guest OS	Ubuntu	Ubuntu
-CPU	2 vCPU	2 vCPU
-Memory	2 GB	2 GB
-Disk	20 GB	20 GB
-
-
-2. CPU Benchmark Results
-Benchmark: Sysbench CPU
-Prime Number Limit: 20,000
-Number of Threads: 1
-Benchmark Parameter	Type-1: Proxmox VE	Type-2: VMware Workstation
-Total Execution Time	10.0005 s	10.0025 s
-Total Events	17,494	10,596
-Events per Second	1,749.16	1,059.10
-Average Latency	0.57 ms	0.94 ms
-
-
-3. Overall Result
-The same Sysbench CPU benchmark was executed on both hypervisors using the same virtual machine configuration.
-- Proxmox VE: 17,494 total events and 1,749.16 events per second.
-- VMware Workstation: 10,596 total events and 1,059.10 events per second.
-- Execution time: Approximately 10 seconds for both hypervisors.
-- Average latency: 0.57 ms for Proxmox VE and 0.94 ms for VMware Workstation.
-Conclusion
-Under the tested configuration, Proxmox VE recorded higher CPU benchmark throughput and lower average latency than VMware Workstation. The execution times were almost identical.
-These results are specific to the tested hardware, virtual machine configuration, Sysbench version, and benchmark settings.
-4. Screenshot Reference
-Screenshot	File Name
-Proxmox VE Sysbench Result	06-proxmox-sysbench-result.png
-VMware Workstation Sysbench Result	04-vmware-sysbench-result.png
-Final Performance Comparison	01-hypervisor-performance-comparison.png
+Overall Performance Analysis
+1. Introduction
+This experiment compares the performance of two virtualization approaches:
+- Type-1 Hypervisor: Proxmox VE
+- Type-2 Hypervisor: VMware Workstation
+The comparison is based on system configuration and Sysbench benchmark results.
+2. Type-1 Hypervisor - Proxmox
+System Configuration
+- Guest OS: Ubuntu
+- CPU Cores: 2 vCPU
+- RAM: 2 GB
+- Storage: 20 GB
+Sysbench Result
+- CPU Score/Result: 1,749.16 events/sec
+- Total Events: 17,494
+- Execution Time: 10.0005 s
+- Average Latency: 0.57 ms
+Resource Monitoring
+- CPU Usage: Not provided in the submitted screenshots
+- Memory Usage: Not provided in the submitted screenshots
+3. Type-2 Hypervisor - VMware
+System Configuration
+- Guest OS: Ubuntu
+- CPU Cores: 2 vCPU
+- RAM: 2 GB
+- Storage: 20 GB
+Sysbench Result
+- CPU Score/Result: 1,059.10 events/sec
+- Total Events: 10,596
+- Execution Time: 10.0025 s
+- Average Latency: 0.94 ms
+Resource Monitoring
+- CPU Usage: Not provided in the submitted screenshots
+- Memory Usage: Not provided in the submitted screenshots
+4. Performance Comparison
+CPU Performance
+Proxmox Result: 1,749.16 events/sec
+VMware Result: 1,059.10 events/sec
+Observation: Proxmox VE recorded 1,749.16 events/sec, while VMware Workstation recorded 1,059.10 events/sec in the submitted Sysbench CPU benchmark.
+Memory Performance
+Proxmox Result: Not provided in the submitted screenshots
+VMware Result: Not provided in the submitted screenshots
+Observation: Memory benchmark values were not present in the submitted screenshots, so no memory-performance values have been assumed.
+Execution Time
+Proxmox: 10.0005 s
+VMware: 10.0025 s
+Observation: Both benchmark runs completed in approximately 10 seconds, with very close execution times.
+5. Overall Observation
+The experiment was conducted using Ubuntu guest operating systems with the same listed virtual machine resources: 2 vCPU, 2 GB RAM, and 20 GB storage.
+The measured Sysbench CPU results were:
+- Proxmox VE: 17,494 total events and 1,749.16 events/sec.
+- VMware Workstation: 10,596 total events and 1,059.10 events/sec.
+- Proxmox VE average latency: 0.57 ms.
+- VMware Workstation average latency: 0.94 ms.
+- Proxmox VE execution time: 10.0005 s.
+- VMware Workstation execution time: 10.0025 s.
+The submitted screenshots do not contain memory benchmark or CPU/memory resource-monitoring values, so those values have not been assumed.
+6. Conclusion
+The experiment helped in understanding the practical performance differences between Type-1 and Type-2 hypervisors.
+Based on the recorded Sysbench CPU results, Proxmox VE recorded a higher measured event rate and lower average latency than VMware Workstation under the tested configuration. The execution times were nearly identical.
+The final comparison is based on the actual benchmark results obtained during the experiment.
