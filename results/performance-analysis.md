@@ -31,8 +31,6 @@ This experiment compares the performance of two virtualization approaches:
 
 ### 2.3 Resource Monitoring
 
-The Proxmox VM monitoring screenshot shows:
-
 - **CPU Usage:** 0.75%
 - **Memory Usage:** 88.12% (1.76 GiB / 2.00 GiB)
 
