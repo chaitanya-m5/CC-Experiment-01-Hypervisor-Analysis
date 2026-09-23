@@ -57,6 +57,11 @@ This experiment compares the performance of two virtualization approaches:
 | Execution Time | **10.0025 s** |
 | Average Latency | **0.94 ms** |
 
+### 2.3 Resource Monitoring
+
+- **CPU Usage:** 1.5%
+- **Memory Usage:** 48.25% 
+
 ---
 
 ## 4. Performance Comparison
@@ -93,8 +98,8 @@ The execution times were very close:
 
 | Resource | Proxmox VE | VMware Workstation |
 |---|---:|---:|
-| CPU Usage | **0.75%** | Not provided |
-| Memory Usage | **88.12% (1.76 GiB / 2.00 GiB)** | Not provided |
+| CPU Usage | **0.75%** | **1.5%** |
+| Memory Usage | **88.12% (1.76 GiB / 2.00 GiB)** | **48.25%** |
 
 ---
 
