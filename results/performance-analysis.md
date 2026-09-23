@@ -123,7 +123,7 @@ The measured average latency was:
 
 The execution time was approximately 10 seconds for both benchmark runs.
 
-The Proxmox VM resource monitoring showed **0.75% CPU usage** and **88.12% memory usage (1.76 GiB / 2.00 GiB)** at the time of the captured monitoring result.
+The Proxmox VM resource monitoring showed **0.75% CPU usage** and **88.12% memory usage (1.76 GiB / 2.00 GiB)** whereas VMWare Workstation showed **1.5% CPU usage** and **48.25% memory usage** at the time of the captured monitoring result.
 
 ---
 
