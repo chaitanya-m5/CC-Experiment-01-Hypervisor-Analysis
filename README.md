@@ -2,12 +2,12 @@
 
 ## Performance Analysis of Type-1 and Type-2 Hypervisors
 
-This experiment presents a comparative analysis of two virtualization approaches:
+This experiment compares two virtualization approaches:
 
 * **Type-1 Hypervisor:** Proxmox VE
 * **Type-2 Hypervisor:** VMware Workstation
 
-Both hypervisors were used to run an Ubuntu virtual machine, and their performance was evaluated using CPU benchmarking and resource utilization observations.
+Both hypervisors were used to run an Ubuntu virtual machine. Their CPU performance and resource utilization were observed and compared using benchmarking tools and experimental results.
 
 ---
 
@@ -20,13 +20,13 @@ The objectives of this experiment are:
 * To configure and run an Ubuntu virtual machine using VMware Workstation.
 * To perform CPU benchmarking using Sysbench.
 * To monitor resource utilization.
-* To compare the performance of Type-1 and Type-2 virtualization.
+* To compare the performance of both virtualization approaches.
 
 ---
 
 ## 2. Hypervisor Types
 
-### Type-1 Hypervisor – Proxmox VE
+### 2.1 Type-1 Hypervisor – Proxmox VE
 
 Proxmox VE is a **Type-1 bare-metal hypervisor** that runs directly on the physical hardware.
 
@@ -34,11 +34,11 @@ It provides:
 
 * Direct access to hardware resources
 * Virtual machine management
-* Efficient resource allocation
+* Resource allocation and monitoring
 * Web-based administration
 * Support for server and data-center virtualization
 
-### Type-2 Hypervisor – VMware Workstation
+### 2.2 Type-2 Hypervisor – VMware Workstation
 
 VMware Workstation is a **Type-2 hosted hypervisor** that runs on top of a host operating system.
 
@@ -47,7 +47,7 @@ It provides:
 * Easy virtual machine creation
 * Desktop-based VM management
 * Support for multiple guest operating systems
-* Convenient development and testing environment
+* A convenient environment for development and testing
 
 ---
 
@@ -66,7 +66,7 @@ It provides:
 
 ## 4. Experimental Procedure
 
-### Proxmox VE
+### 4.1 Proxmox VE
 
 1. Installed and configured Proxmox VE.
 2. Created an Ubuntu virtual machine.
@@ -75,9 +75,9 @@ It provides:
 5. Installed Sysbench.
 6. Executed the CPU benchmark.
 7. Recorded the benchmark results.
-8. Monitored resource utilization.
+8. Monitored system resource utilization.
 
-### VMware Workstation
+### 4.2 VMware Workstation
 
 1. Installed VMware Workstation.
 2. Created an Ubuntu virtual machine.
@@ -92,7 +92,7 @@ It provides:
 
 ## 5. Benchmarking
 
-CPU performance was measured using **Sysbench**.
+CPU performance was evaluated using **Sysbench**.
 
 The following command was used:
 
@@ -100,7 +100,7 @@ The following command was used:
 sysbench cpu --cpu-max-prime=20000 run
 ```
 
-The benchmark results were used for the performance comparison between Proxmox VE and VMware Workstation.
+The benchmark results obtained from both virtual machines were used for comparison.
 
 ---
 
@@ -108,11 +108,11 @@ The benchmark results were used for the performance comparison between Proxmox V
 
 Only **one representative screenshot from each hypervisor** is included in this README.
 
-### Proxmox VE
+### 6.1 Proxmox VE – Sysbench Result
 
 ![Proxmox VE Sysbench Result](screenshots/type1-proxmox/06-proxmox-sysbench-result.png)
 
-### VMware Workstation
+### 6.2 VMware Workstation – Sysbench Result
 
 ![VMware Workstation Sysbench Result](screenshots/type2-vmware/04-vmware-sysbench-result.png)
 
@@ -120,13 +120,13 @@ Only **one representative screenshot from each hypervisor** is included in this 
 
 # 7. Performance Comparison
 
-The following graphs provide a visual comparison between Proxmox VE and VMware Workstation based on the experimental results.
+The following graphs provide a visual comparison of the experimental results obtained from Proxmox VE and VMware Workstation.
 
-## 7.1 CPU Performance Comparison
+## 7.1 Overall Hypervisor Performance
 
-![CPU Performance Comparison](screenshots/comparison/01-cpu-performance-comparison.png)
+![Overall Hypervisor Performance Comparison](screenshots/comparison/01-hypervisor-performance-comparison.png)
 
-This graph compares the CPU benchmark performance obtained from the two virtualization environments using Sysbench.
+This graph presents the overall performance comparison between the Type-1 and Type-2 hypervisor environments.
 
 ---
 
@@ -134,39 +134,38 @@ This graph compares the CPU benchmark performance obtained from the two virtuali
 
 ![Resource Utilization Comparison](screenshots/comparison/02-resource-utilization-comparison.png)
 
-This graph compares the observed resource utilization of the virtual machines during the experiment.
+This graph compares the observed resource utilization of the Ubuntu virtual machines running on the two hypervisors.
 
 ---
 
-## 7.3 Overall Performance Comparison
+## 7.3 Performance Analysis Comparison
 
-![Overall Performance Comparison](screenshots/comparison/03-overall-performance-comparison.png)
+![Performance Analysis Comparison](screenshots/comparison/03-performance-analysis-comparison.png)
 
-This graph provides an overall visual comparison of the performance measurements obtained from Proxmox VE and VMware Workstation.
+This graph provides a visual comparison of the measured performance parameters obtained during the experiment.
 
 ---
 
-## 8. Performance Analysis
+## 8. Detailed Performance Analysis
 
-The detailed numerical results, observations and analysis are available in:
+The complete numerical results, observations and experimental analysis are available in:
 
-**[Performance Analysis](results/performance-analysis.md)**
+[**Performance Analysis**](results/performance-analysis.md)
 
-The analysis contains the experimental results obtained from the Proxmox VE and VMware Workstation environments.
+The performance analysis contains the detailed benchmark results and resource utilization observations.
 
 ---
 
 ## 9. Type-1 vs Type-2 Comparison
 
-| Feature                 | Proxmox VE                | VMware Workstation          |
-| ----------------------- | ------------------------- | --------------------------- |
-| Hypervisor Type         | Type-1                    | Type-2                      |
-| Runs On                 | Physical hardware         | Host operating system       |
-| Hardware Access         | Direct                    | Through host OS             |
-| Primary Usage           | Server / Data Center      | Desktop / Development       |
-| Management              | Web-based                 | Desktop application         |
-| Virtualization Overhead | Lower                     | Higher due to host OS layer |
-| Typical Use             | Production virtualization | Testing and development     |
+| Feature         | Proxmox VE                | VMware Workstation      |
+| --------------- | ------------------------- | ----------------------- |
+| Hypervisor Type | Type-1                    | Type-2                  |
+| Runs On         | Physical hardware         | Host operating system   |
+| Hardware Access | Direct                    | Through host OS         |
+| Primary Usage   | Server / Data Center      | Desktop / Development   |
+| Management      | Web-based                 | Desktop application     |
+| Typical Use     | Production virtualization | Testing and development |
 
 ---
 
@@ -174,11 +173,11 @@ The analysis contains the experimental results obtained from the Proxmox VE and 
 
 * Proxmox VE operates directly on physical hardware as a Type-1 hypervisor.
 * VMware Workstation operates above the host operating system as a Type-2 hypervisor.
-* Both environments successfully supported the Ubuntu guest operating system.
+* Both environments successfully ran the Ubuntu guest operating system.
 * Sysbench was used to evaluate CPU performance.
 * Resource utilization was monitored during the experiment.
-* Graphical comparisons make it easier to observe differences between the two virtualization approaches.
-* Detailed experimental results are provided in the performance analysis document.
+* Comparison graphs provide a visual representation of the measured results.
+* Detailed numerical results and observations are documented in the performance analysis file.
 
 ---
 
@@ -205,9 +204,9 @@ CC-Experiment-01-Hypervisor-Analysis/
 │   │   └── 04-vmware-sysbench-result.png
 │   │
 │   └── comparison/
-│       ├── 01-cpu-performance-comparison.png
+│       ├── 01-hypervisor-performance-comparison.png
 │       ├── 02-resource-utilization-comparison.png
-│       └── 03-overall-performance-comparison.png
+│       └── 03-performance-analysis-comparison.png
 │
 ├── results/
 │   └── performance-analysis.md
@@ -223,4 +222,4 @@ This experiment provided practical experience with both Type-1 and Type-2 virtua
 
 Proxmox VE was studied as a bare-metal hypervisor, while VMware Workstation was studied as a hosted hypervisor. Ubuntu virtual machines were configured in both environments and evaluated using Sysbench.
 
-The benchmark results, resource utilization observations and graphical comparisons provide a practical understanding of the performance characteristics of the two virtualization approaches.
+The benchmark results, resource utilization observations and comparison graphs provide a practical understanding of the differences between Type-1 and Type-2 virtualization.
