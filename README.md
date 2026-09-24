@@ -142,7 +142,11 @@ xychart-beta
     bar [88.12, 48.25]
 ```
 
-### Overall Performance Graph
+### Overall Performance Gra
+
+## 8. Detailed Performance Analysis
+
+The complete numerical results, observations and experimental analysis are available in:
 
 ```mermaid
 xychart-beta
@@ -152,11 +156,6 @@ xychart-beta
     bar [1749.16, 1059.10]
 ```
 
-## 8. Detailed Performance Analysis
-
-The complete numerical results, observations and experimental analysis are available in:
-
-[**Performance Analysis**](results/performance-analysis.md)
 
 The performance analysis contains the detailed benchmark results and resource utilization observations.
 
