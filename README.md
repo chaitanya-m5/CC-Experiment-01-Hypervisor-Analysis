@@ -142,6 +142,16 @@ xychart-beta
     bar [88.12, 48.25]
 ```
 
+### Overall Performance Graph
+
+```mermaid
+xychart-beta
+    title "Overall Events per Second"
+    x-axis ["Proxmox VE", "VMware Workstation"]
+    y-axis "Events/sec" 0 --> 2000
+    bar [1749.16, 1059.10]
+```
+
 ## 8. Detailed Performance Analysis
 
 The complete numerical results, observations and experimental analysis are available in:
