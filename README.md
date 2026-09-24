@@ -122,29 +122,25 @@ Only **one representative screenshot from each hypervisor** is included in this 
 
 The following graphs provide a visual comparison of the experimental results obtained from Proxmox VE and VMware Workstation.
 
-## 7.1 Overall Hypervisor Performance
+## 7.1 CPU Usage Graph
 
-![Overall Hypervisor Performance Comparison](screenshots/comparison/01-hypervisor-performance-comparison.png)
+```mermaid
+xychart-beta
+    title "CPU Usage Comparison"
+    x-axis ["Proxmox VE", "VMware Workstation"]
+    y-axis "CPU Usage (%)" 0 --> 2
+    bar [0.75, 1.5]
+```
 
-This graph presents the overall performance comparison between the Type-1 and Type-2 hypervisor environments.
+## 7.2 Memory Usage Graph
 
----
-
-## 7.2 Resource Utilization Comparison
-
-![Resource Utilization Comparison](screenshots/comparison/02-resource-utilization-comparison.png)
-
-This graph compares the observed resource utilization of the Ubuntu virtual machines running on the two hypervisors.
-
----
-
-## 7.3 Performance Analysis Comparison
-
-![Performance Analysis Comparison](screenshots/comparison/03-performance-analysis-comparison.png)
-
-This graph provides a visual comparison of the measured performance parameters obtained during the experiment.
-
----
+```mermaid
+xychart-beta
+    title "Memory Usage Comparison"
+    x-axis ["Proxmox VE", "VMware Workstation"]
+    y-axis "Memory Usage (%)" 0 --> 100
+    bar [88.12, 48.25]
+```
 
 ## 8. Detailed Performance Analysis
 
