@@ -124,37 +124,56 @@ The following graphs provide a visual comparison of the experimental results obt
 
 ## 7.1 CPU Usage Graph
 
+## 7.1 CPU Usage Graph
+
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': {
+      'plotColorPalette': '#f1c40f'
+    }
+  }
+}}%%
 xychart-beta
     title "CPU Usage Comparison"
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "CPU Usage (%)" 0 --> 2
     bar [0.75, 1.5]
-```
 
 ## 7.2 Memory Usage Graph
 
-```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': {
+      'plotColorPalette': '#f1c40f'
+    }
+  }
+}}%%
 xychart-beta
     title "Memory Usage Comparison"
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Memory Usage (%)" 0 --> 100
     bar [88.12, 48.25]
-```
 
 ### Overall Performance Gra
 
 ## 8. Detailed Performance Analysis
 
-The complete numerical results, observations and experimental analysis are available in:
-
-```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': {
+      'plotColorPalette': '#f1c40f'
+    }
+  }
+}}%%
 xychart-beta
     title "Overall Events per Second"
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Events/sec" 0 --> 2000
     bar [1749.16, 1059.10]
-```
 
 
 The performance analysis contains the detailed benchmark results and resource utilization observations.
