@@ -124,12 +124,18 @@ The following graphs provide a visual comparison of the experimental results obt
 
 ## 7.1 CPU Usage Graph
 
+# 7. Performance Comparison
+
+The following graphs provide a visual comparison of the experimental results obtained from Proxmox VE and VMware Workstation.
+
+## 7.1 CPU Usage Graph
+
 ```mermaid
 %%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'xyChart': {
-      'plotColorPalette': '#f1c40f'
+  "theme": "base",
+  "themeVariables": {
+    "xyChart": {
+      "plotColorPalette": "#1f4e78"
     }
   }
 }}%%
@@ -138,12 +144,22 @@ xychart-beta
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "CPU Usage (%)" 0 --> 2
     bar [0.75, 1.5]
+```
 
+**Observation:** Proxmox VE recorded a CPU usage of **0.75%**, while VMware Workstation recorded **1.50%**.
+
+
+
+## 7.2 Memory Usage
+
+## **2. Memory Usage**
+
+```mermaid
 %%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'xyChart': {
-      'plotColorPalette': '#f1c40f'
+  "theme": "base",
+  "themeVariables": {
+    "xyChart": {
+      "plotColorPalette": "#404040"
     }
   }
 }}%%
@@ -152,14 +168,21 @@ xychart-beta
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Memory Usage (%)" 0 --> 100
     bar [88.12, 48.25]
+```
+
+**Observation:** Proxmox VE recorded **88.12%** memory usage, while VMware Workstation recorded **48.25%**.
+
 
 ## 8. Detailed Performance Analysis
 
+## **3. Overall Events per Second**
+
+```mermaid
 %%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'xyChart': {
-      'plotColorPalette': '#f1c40f'
+  "theme": "base",
+  "themeVariables": {
+    "xyChart": {
+      "plotColorPalette": "#163A5F"
     }
   }
 }}%%
@@ -168,10 +191,9 @@ xychart-beta
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Events/sec" 0 --> 2000
     bar [1749.16, 1059.10]
+```
 
-The performance analysis contains the detailed benchmark results and resource utilization observations.
-
----
+**Observation:** Proxmox VE achieved **1749.16 events/sec**, while VMware Workstation achieved **1059.10 events/sec**.
 
 ## 9. Type-1 vs Type-2 Comparison
 
