@@ -139,8 +139,6 @@ xychart-beta
     y-axis "CPU Usage (%)" 0 --> 2
     bar [0.75, 1.5]
 
-## 7.2 Memory Usage Graph
-
 %%{init: {
   'theme': 'base',
   'themeVariables': {
@@ -154,8 +152,6 @@ xychart-beta
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Memory Usage (%)" 0 --> 100
     bar [88.12, 48.25]
-
-### Overall Performance Gra
 
 ## 8. Detailed Performance Analysis
 
@@ -172,7 +168,6 @@ xychart-beta
     x-axis ["Proxmox VE", "VMware Workstation"]
     y-axis "Events/sec" 0 --> 2000
     bar [1749.16, 1059.10]
-
 
 The performance analysis contains the detailed benchmark results and resource utilization observations.
 
