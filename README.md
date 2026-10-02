@@ -124,8 +124,6 @@ The following graphs provide a visual comparison of the experimental results obt
 
 ## 7.1 CPU Usage Graph
 
-## 7.1 CPU Usage Graph
-
 ```mermaid
 %%{init: {
   'theme': 'base',
